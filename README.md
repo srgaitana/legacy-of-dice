@@ -13,7 +13,7 @@
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tu_usuario/legacy-of-dice.git
+   git clone https://github.com/srgaitana/legacy-of-dice.git
 2. **Abre el archivo index.html en tu navegador para comenzar a jugar.**
 
 # Cómo Jugar
