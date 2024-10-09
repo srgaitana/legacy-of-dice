@@ -1,0 +1,185 @@
+/* Paleta de colores */
+:root {
+    --color-primary: #494949;
+    --color-secondary: #b8b8b8;
+    --color-player-1: #2382ef;
+    --color-player-2: #c45959;
+    --color-accent: #8d99ae;
+    --color-background: #1d1d35;
+    --color-text: #333333;
+}
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; 
+}
+
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    font-size: 60px; /* Aumentar el tamaño de la fuente */
+    margin: 40px 0; /* Aumentar el margen superior e inferior */
+    color: transparent; /* Hacer el texto transparente para usar el fondo */
+    background: linear-gradient(90deg, var(--color-player-1), var(--color-primary)); /* Gradiente */
+    -webkit-background-clip: text; /* Clip para el gradiente */
+    background-clip: text; /* Clip para el gradiente */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Mejora la sombra */
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    animation: fadeIn 1s ease; /* Animación de entrada */
+}
+
+/* Jugadores divs */
+.jugadores {
+    display: flex; /* Usar flexbox para alinear los jugadores */
+    justify-content: center; /* Centrar horizontalmente */
+    margin: 20px; /* Margen alrededor */
+}
+
+.jugador-1, .jugador-2 {
+    width: 45%; /* Ajustar el ancho */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 10px; /* Margen entre los divs de jugadores */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jugador-1 {
+    background-color: var(--color-player-1);
+    color: white;
+}
+
+.jugador-2 {
+    background-color: var(--color-player-2);
+    color: white;
+}
+
+/* Hover effect for players */
+.jugador-1:hover, .jugador-2:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation bar */
+nav {
+    background-color: var(--color-primary);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    display: flex; /* Usar flexbox para alinear el botón y el texto */
+    flex-direction: column; /* Alinear en columna */
+    align-items: center; /* Centrar los elementos */
+}
+
+/* Estilos del botón */
+button {
+    background-color: var(--color-accent); /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    margin: 10px auto; /* Centrando el botón */
+}
+
+/* Efecto al pasar el ratón */
+button:hover {
+    background-color: #f5a623; /* Cambia el color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Efecto al hacer clic */
+button:active {
+    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+}
+
+/* Aside - History of actions */
+aside {
+    background-color: rgba(73, 73, 73, 0.8); /* Color semi-transparente */
+    color: var(--color-secondary);
+    padding: 15px;
+    width: 300px;
+    position: fixed;
+    right: 0;
+    top: 70px;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Ocultar inicialmente */
+}
+
+aside h3 {
+    text-align: center;
+    color: var(--color-accent);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

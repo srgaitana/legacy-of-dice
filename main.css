@@ -1,0 +1,107 @@
+/* Paleta de colores */
+:root {
+    --color-primary: #494949;     /* Color principal */
+    --color-secondary: #b8b8b8;   /* Color secundario */
+    --color-player-1: #2382ef;    /* Color jugador 1 */
+    --color-player-2: #c45959;    /* Color jugador 2 */
+    --color-accent: #8d99ae;      /* Color de acento */
+    --color-background: #1d1d35;  /* Fondo de la página */
+    --color-text: #333333;        /* Color del texto */
+}
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; 
+}
+
+img {
+    width: 40px;  /* Cambia el tamaño del SVG aquí */
+    height: 40px; /* Ajusta la altura para que sea igual a la anchura */
+    margin-right: 10px; /* Espacio entre el SVG y el texto */
+    position: absolute;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation bar */
+nav {
+    background-color: var(--color-primary);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* Main content */
+main {
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+main h1 {
+    font-size: 36px;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+/* Button */
+button {
+    background-color: var(--color-player-1);
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-player-2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
